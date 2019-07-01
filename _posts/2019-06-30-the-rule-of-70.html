@@ -60,7 +60,7 @@ d3.select(".chart")
     .enter()
     .append("div")
     .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return d; });
+    .text(function(d) { return Math.round(Number(d)*10)/10; });
 }
 	    
 	    
