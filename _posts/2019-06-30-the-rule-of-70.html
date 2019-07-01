@@ -17,8 +17,8 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 
 
 <div class="slidercontainer">
-  <input type="range" min="9" max="3000" value="500" class="slider" id="mySlider">
-  <p align="center">Annual percentage growth: <input size="4" id="numericalValue"> %</p>
+  <input type="range" min="9" max="3000" value="500" class="slider" id="mySlider" oninput="updateValues()">
+  <p align="center">Annual percentage growth: <input size="4" id="numericalValue" oninput="updateValues()"> %</p>
 </div>
 
 <div class="chart">
@@ -49,7 +49,4 @@ d3.select(".chart")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 }
-
-output.oninput = updateValues();
-slider.oninput = updateValues();
 </script>
