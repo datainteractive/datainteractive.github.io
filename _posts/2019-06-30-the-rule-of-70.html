@@ -48,7 +48,7 @@ d3.select(".chart")
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 	
 }
-	
+updateValues();
 output.oninput = updateValues();
 slider.oninput = updateValues();
 </script>
