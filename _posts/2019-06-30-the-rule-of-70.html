@@ -11,3 +11,13 @@ The rule of 70 is a rule of thumb stipulating that a quantity with x percent ann
 <div class="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
 </div>
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+} 
