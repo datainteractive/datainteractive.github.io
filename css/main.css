@@ -11,10 +11,10 @@
   opacity: 1; /* Fully shown on mouse-over */
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
