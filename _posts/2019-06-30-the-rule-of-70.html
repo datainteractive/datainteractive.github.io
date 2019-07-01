@@ -48,7 +48,42 @@ d3.select(".chart")
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 	
 }
-updateValues();
-output.oninput = updateValues();
-slider.oninput = updateValues();
+output.oninput = function() {
+	
+output.value = slider.value/100;
+var data = [Math.log(2)/Math.log(1 + Number(slider.value)/10000), 100*70/Number(slider.value)];
+	
+d3.select(".chart")
+  .selectAll("div")
+    .remove()
+	.exit();
+  
+d3.select(".chart")
+  .selectAll("div")
+  .data(data)
+    .enter()
+    .append("div")
+    .style("width", function(d) { return d + "px"; })
+    .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
+	
+}
+slider.oninput = function()  {
+	
+output.value = slider.value/100;
+var data = [Math.log(2)/Math.log(1 + Number(slider.value)/10000), 100*70/Number(slider.value)];
+	
+d3.select(".chart")
+  .selectAll("div")
+    .remove()
+	.exit();
+  
+d3.select(".chart")
+  .selectAll("div")
+  .data(data)
+    .enter()
+    .append("div")
+    .style("width", function(d) { return d + "px"; })
+    .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
+	
+}
 </script>
