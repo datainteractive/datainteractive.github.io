@@ -33,7 +33,7 @@ output.value = slider.value/10;
 slider.oninput = function() {
   output.value = this.value/10;
 	
-var data = [this.value, this.value + 2];
+var data = [this.value, Number(this.value) + 2];
 
   
 d3.select(".chart")
