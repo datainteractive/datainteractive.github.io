@@ -40,10 +40,6 @@ slider.oninput = function() {
 	
 var data = [Math.log(2)/Math.log(1 + Number(this.value)/1000), 10*70/Number(this.value)];
 	
-	
-var x = d3.scale.linear()
-    .domain([0, d3.max(data)])
-    .range([0, 420]);
 
 d3.select(".chart")
   .selectAll("div")
