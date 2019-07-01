@@ -8,22 +8,42 @@ date: 2019-06-30
 
 
 <p>
-The rule of 70 is a rule of thumb stipulating that a quantity with x percent annual growth will take 70/x years to double. Evidently, this is only accurate for a limited range of x. Below is a simple interactive diagram which shows the accuracy of the rule of 70.
+The rule of 70 is a quick way to approximate doubling time for an exponentially growing quantity. It says:
+  
+  <q>A quantity with x percent annual growth will take 70/x years to double.</q>
+  
+Of course, this is only accurate for a particular range of x. Below is a simple interactive diagram to test the accuracy of this approximation.
 </p>
 
 
 <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-  <p>Value: <span id="demo"></span></p>
+  <input type="range" min="0" max="200" value="50" class="slider" id="mySlider">
+  <p text-align: center>Annual percentage growth: <span id="numericalValue"></span>%</p>
 </div>
 
+<div class="chart">
+    
+</div>
 
 <script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+var slider = document.getElementById("mySlider");
+var output = document.getElementById("numericalValue");
+output.innerHTML = slider.value/10;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
+  
+d3.select(".chart")
+  .selectAll("div")
+    .remove()
+	  .exit();
+  
+d3.select(".chart")
+  .selectAll("div")
+  .data(data)
+    .enter()
+    .append("div")
+    .style("width", function(d) { return d + "px"; })
+    .text(function(d) { return '$ ' + d; });
 }
 </script>
