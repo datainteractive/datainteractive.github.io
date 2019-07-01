@@ -28,10 +28,10 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 <script>
 var slider = document.getElementById("mySlider");
 var output = document.getElementById("numericalValue");
-output.innerHTML = slider.value/10;
+output.value = slider.value/10;
 
 slider.oninput = function() {
-  output.innerHTML = this.value/10;
+  output.value = this.value/10;
 	
 var data = [this.value, 86, 168, 281, 303, 365];
 
