@@ -3,6 +3,37 @@ layout: main
 title: "The Rule of 70"
 date: 2019-06-30
 ---
+
+<style>
+  
+  .slidercontainer {
+  margin: auto;
+  width: 200px;
+  
+}
+/* The slider itself */
+.slider {
+  width: 200px;
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  cursor: pointer; /* Cursor on hover */
+}
+
+  
+</style>
+
+
+
+
 <p>
 The rule of 70 is a rule of thumb stipulating that a quantity with x percent annual growth will take 70/x years to double. Evidently, this is only accurate for a limited range of x. Below is a simple interactive diagram which shows the accuracy of the rule of 70.
 </p>
