@@ -17,7 +17,7 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 
 
 <div class="slidercontainer">
-  <input type="range" min="0" max="200" value="50" class="slider" id="mySlider">
+  <input type="range" min="0" max="300" value="50" class="slider" id="mySlider">
   <p align="center">Annual percentage growth: <input size="4" id="numericalValue"> %</p>
 </div>
 
@@ -29,11 +29,7 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 var slider = document.getElementById("mySlider");
 var output = document.getElementById("numericalValue");
 output.value = slider.value/10;
-	
-
-	
 var data = [Math.log(2)/Math.log(1 + Number(slider.value)/1000), 10*70/Number(slider.value)];
-	
 	
 d3.select(".chart")
   .selectAll("div")
@@ -48,11 +44,9 @@ d3.select(".chart")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return d; });
 	
-	
-	
 output.oninput = function() {
 	slider.value = this.value*10;	
-var data = [Math.log(2)/Math.log(1 + Number(slider.value)/1000), 10*70/Number(slider.value)];
+	var data = [Math.log(2)/Math.log(1 + Number(slider.value)/1000), 10*70/Number(slider.value)];
 	
 	
 d3.select(".chart")
@@ -72,11 +66,8 @@ d3.select(".chart")
 	    
 slider.oninput = function() {
   output.value = this.value/10;
+	var data = [Math.log(2)/Math.log(1 + Number(this.value)/1000), 10*70/Number(this.value)];
 	
-	
-var data = [Math.log(2)/Math.log(1 + Number(this.value)/1000), 10*70/Number(this.value)];
-	
-
 d3.select(".chart")
   .selectAll("div")
     .remove()
