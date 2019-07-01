@@ -32,11 +32,14 @@ output.innerHTML = slider.value/10;
 
 slider.oninput = function() {
   output.innerHTML = this.value/10;
+	
+var data = [this.value, 86, 168, 281, 303, 365];
+
   
 d3.select(".chart")
   .selectAll("div")
     .remove()
-		.exit();
+	.exit();
   
 d3.select(".chart")
   .selectAll("div")
