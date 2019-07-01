@@ -1,8 +1,8 @@
 /* Slider settings ----------------------------------------------------*/
 
 .slidercontainer {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
     width: 40%;
     padding: 20px;
   
