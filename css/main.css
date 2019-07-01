@@ -1,4 +1,7 @@
-
+.slidercontainer {
+  margin: auto;
+  
+}
 /* The slider itself */
 .slider {
   width: 200px;
