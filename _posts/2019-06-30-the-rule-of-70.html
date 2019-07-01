@@ -22,14 +22,15 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 </div>
 
 <div class="chart">
-    
-</div> test
+</div>
+
+
+
+
 
 <script>
 var slider = document.getElementById("mySlider");
 var output = document.getElementById("numericalValue");
-	
-	
 	
 function updateValues() {
 output.value = slider.value/100;
@@ -48,11 +49,7 @@ d3.select(".chart")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 }
-	
-	
+
 output.oninput = updateValues();
 slider.oninput = updateValues();
-	
-	
-
 </script>
