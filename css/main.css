@@ -1,27 +1,3 @@
-.slidercontainer {
-  margin: auto;
-  width: 200px;
-  
-}
-/* The slider itself */
-.slider {
-  width: 200px;
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-.slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  cursor: pointer; /* Cursor on hover */
-}
-
-/*-----------------------------------------------------*/
-
 a {
     text-decoration: none;
     color: #888;
