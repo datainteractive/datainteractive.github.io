@@ -37,7 +37,7 @@ output.value = slider.value/10;
 slider.oninput = function() {
   output.value = this.value/10;
 	
-var data = [this.value, 10*70/Number(this.value)];
+var data = [Math.log(2)/Math.log(1 + Number(this.value)/1000)/, 10*70/Number(this.value)];
 
 d3.select(".chart")
   .selectAll("div")
