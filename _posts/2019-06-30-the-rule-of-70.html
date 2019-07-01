@@ -42,7 +42,7 @@ d3.select(".chart")
     .enter()
     .append("div")
     .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return " " + Math.round(Number(d)*10)/10 + Years; });
+    .text(function(d) { return Math.round(Number(d)*10)/10; });
 	
 output.oninput = function() {
 	slider.value = this.value*10;	
@@ -60,7 +60,7 @@ d3.select(".chart")
     .enter()
     .append("div")
     .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return " " + Math.round(Number(d)*10)/10 + Years; });
+    .text(function(d) { return Math.round(Number(d)*10)/10; });
 }
 	    
 	    
@@ -79,6 +79,6 @@ d3.select(".chart")
     .enter()
     .append("div")
     .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return " " + Math.round(Number(d)*10)/10 + Years; });
+    .text(function(d) { return Math.round(Number(d)*10)/10; });
 }
 </script>
