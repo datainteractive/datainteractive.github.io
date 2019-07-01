@@ -31,7 +31,9 @@ var output = document.getElementById("numericalValue");
 output.value = slider.value/10;
 	
 
-	    
+output.oninput = function() {
+	slider.value = this.value*10;	
+}
 	    
 	    
 slider.oninput = function() {
