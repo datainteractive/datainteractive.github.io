@@ -42,7 +42,7 @@ a:hover {
 .chart div {
   font-size: 20px;
   background-color: lightgreen;
-  text-align: left;
+  text-align: right;
   margin: 10px;
   color: black;
 }
