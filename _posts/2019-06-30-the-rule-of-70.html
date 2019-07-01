@@ -29,8 +29,9 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 var slider = document.getElementById("mySlider");
 var output = document.getElementById("numericalValue");
 	
+	
+	
 function updateValues() {
-	
 output.value = slider.value/100;
 var data = [Math.log(2)/Math.log(1 + Number(slider.value)/10000), 100*70/Number(slider.value)];
 	
@@ -46,44 +47,12 @@ d3.select(".chart")
     .append("div")
     .style("width", function(d) { return d + "px"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
-	
 }
-output.oninput = function() {
 	
-output.value = slider.value/100;
-var data = [Math.log(2)/Math.log(1 + Number(slider.value)/10000), 100*70/Number(slider.value)];
 	
-d3.select(".chart")
-  .selectAll("div")
-    .remove()
-	.exit();
-  
-d3.select(".chart")
-  .selectAll("div")
-  .data(data)
-    .enter()
-    .append("div")
-    .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
+output.oninput = updateValues();
+slider.oninput = updateValues();
 	
-}
-slider.oninput = function()  {
 	
-output.value = slider.value/100;
-var data = [Math.log(2)/Math.log(1 + Number(slider.value)/10000), 100*70/Number(slider.value)];
-	
-d3.select(".chart")
-  .selectAll("div")
-    .remove()
-	.exit();
-  
-d3.select(".chart")
-  .selectAll("div")
-  .data(data)
-    .enter()
-    .append("div")
-    .style("width", function(d) { return d + "px"; })
-    .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
-	
-}
+
 </script>
