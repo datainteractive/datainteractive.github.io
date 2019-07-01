@@ -1,10 +1,9 @@
 /* Slider settings ----------------------------------------------------*/
 
 .slidercontainer {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: auto;
     width: 40%;
-    padding: 100px;
+    padding: 20px;
 }
 
 /* The slider itself */
