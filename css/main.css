@@ -40,8 +40,8 @@ a:hover {
 /* Bar graph settings ----------------------------------------------------*/
 
 .chart div {
-  font: 10px sans-serif;
-  background-color: steelblue;
+  font: 15px sans-serif;
+  background-color: darkgreen;
   text-align: right;
   padding: 3px;
   margin: 1px;
