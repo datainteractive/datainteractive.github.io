@@ -42,9 +42,9 @@ a:hover {
 .chart div {
   font: 20px sans-serif;
   background-color: darkgreen;
-  text-align: right;
+  text-align: left;
   margin: 10px;
-  color: white;
+  color: black;
 }
 
 /* Font and style settings ----------------------------------------------------*/
