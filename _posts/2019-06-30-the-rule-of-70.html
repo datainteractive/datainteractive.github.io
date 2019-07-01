@@ -29,13 +29,30 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 var slider = document.getElementById("mySlider");
 var output = document.getElementById("numericalValue");
 output.value = slider.value/10;
+	
+var data = [slider.value, 10*70/(Number(slider.value)];
+  
+d3.select(".chart")
+  .selectAll("div")
+    .remove()
+	.exit();
+  
+d3.select(".chart")
+  .selectAll("div")
+  .data(data)
+    .enter()
+    .append("div")
+    .style("width", function(d) { return d + "px"; })
+    .text(function(d) { return d; });
 
+	    
+	    
+	    
 slider.oninput = function() {
   output.value = this.value/10;
 	
 var data = [this.value, 10*70/(Number(this.value)];
 
-  
 d3.select(".chart")
   .selectAll("div")
     .remove()
