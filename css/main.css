@@ -40,7 +40,7 @@ a:hover {
 /* Bar graph settings ----------------------------------------------------*/
 
 .chart {   
-    width: 100%;
+    max-width: 100%;
 }
 
 .chart div {
