@@ -71,7 +71,8 @@ h1 {
 }
 
 .indp {
-    width = 90%    
+    width = 90%
+    color: red;
 }
 
 .date-format {
