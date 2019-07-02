@@ -1,6 +1,9 @@
 ---
 layout: page
 ---
-<h1>{{ site.posts.first.title }}</h1>
-	<div class="date-format">{{ site.posts.first.date | date: "%B %-d, %Y" }}</div>
-{{ site.posts.first.content }}
+{% for post in site.posts limit:5 %}
+	<h1>{{ post.title }}</h1>
+		<div class="date-format">{{ post.date | date: "%B %-d, %Y" }}</div>
+	{{ post.content }}
+{% endfor %}
+
