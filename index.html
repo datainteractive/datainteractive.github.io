@@ -1,4 +1,8 @@
 ---
 layout: main
 ---
+<h1>{{ site.posts.first.title }}</h1>
+	<div class="date-format">{{ site.posts.first.date | date: "%B %-d, %Y" }}</div>
+<br><br>
+
 {{ site.posts.first.content }}
