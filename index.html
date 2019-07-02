@@ -4,6 +4,6 @@ layout: page
 {% for post in site.posts limit:5 %}
 	<h1>{{ post.title }}</h1>
 		<div class="date-format">{{ post.date | date: "%B %-d, %Y" }}</div>
-	{{ post.content }}
+	{{ post.content | strip_html | truncatewords: 50 }}
 {% endfor %}
 
