@@ -39,10 +39,6 @@ a:hover {
 
 /* Bar graph settings ----------------------------------------------------*/
 
-.chart {   
-    max-width: 100%;
-}
-
 .chart div {
   background-color: lightgreen;
   text-align: right;
