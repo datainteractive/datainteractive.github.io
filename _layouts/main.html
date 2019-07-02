@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ page.title }} | Data Interactive</title>
+		
+		
+		{% if page.title %}			
+			<title>{{ page.title }} | Data Interactive</title>
+		{% else %}
+			<title>Data Interactive</title>
+		{% endif %}
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto&display=swap" rel="stylesheet"> 
