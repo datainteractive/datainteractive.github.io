@@ -26,10 +26,15 @@ On first glance, this is only accurate for a particular range of x. Below is a s
 </div>
 </blockquote>
 
-Evidently, the approximation is surprisingly good. The exact formula for doubling time is given by
+<p>
+The approximation is surprisingly good. (I was expecting something worse, which is why I made this page to begin with!) 
+</p>
+
+<p>
+Let's check this outcome mathematically. The exact formula for doubling time is given by
 $$\frac{\log 2}{\log(1 + x/100)}.$$
 Approximating log 2 by 0.7 and using the linear approximation for log(1 + y), we obtain precisely the rule of 70. The approximation is valid essentially for as long as the linear approximation for log holds. Essentially, x/100 << 1 suffices.
-
+</p>
 
 <script>
 var slider = document.getElementById("mySlider");
