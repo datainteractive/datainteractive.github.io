@@ -52,13 +52,13 @@ a:hover {
 /* Font and style settings ----------------------------------------------------*/
 
 html {
-    max-width: 90%;
+    max-width: 960px;
     margin: auto;
 }
 
 body {
     font-family: 'Roboto', 'Source Sans Pro', 'PT Serif', Sans-Serif;    
-    max-width: 960px;
+    max-width: 90%;
     margin: auto;
     line-height: 1.6;
     color: #333;
