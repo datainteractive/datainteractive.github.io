@@ -42,6 +42,10 @@ var exact = Math.log(2)/Math.log(1 + Number(slider.value)/10000);
 var approx = 100*70/Number(slider.value)
 var data = [exact, approx, exact/approx];
 	
+	var x = d3.scale.linear()
+    .domain([0, 700])
+    .range([0, 100]);
+	
 d3.select(".chart")
   .selectAll("div")
     .remove()
@@ -52,7 +56,7 @@ d3.select(".chart")
   .data(data)
     .enter()
     .append("div")
-    .style("width", function(d) { return d + "px"; })
+    .style("width", function(d) { return x(d) + "%"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 }
 </script>
