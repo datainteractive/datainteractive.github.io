@@ -2,7 +2,7 @@
 /* Bar graph settings ----------------------------------------------------*/
 
 .chart div {
-  background-color: lightgreen;
+  background-color: 0x1abc9c;
   text-align: right;
   margin: 10px;
    padding-top: 5px;   
