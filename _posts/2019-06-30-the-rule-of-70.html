@@ -22,12 +22,9 @@ Of course, this is only accurate for a particular range of x. Below is a simple 
 </div>
 
 <div class="chart">
+	<div></div>
+	<div></div>
 </div>
-
-
-<div class="chart">
-</div>
-
 
 
 
@@ -49,19 +46,12 @@ function boxUpdate() {
 function updateValues() {
 var exact = Math.log(2)/Math.log(1 + Number(slider.value)/10000);
 var approx = 100*70/Number(slider.value)
-var data = [exact, approx, exact/approx];
+var data = [exact, approx];
 	
-	
-d3.select(".chart")
-  .selectAll("div")
-    .remove()
-	.exit();
   
 d3.select(".chart")
   .selectAll("div")
   .data(data)
-    .enter()
-    .append("div")
     .style("width", function(d) { return Number(d)/8 + "%"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 }
