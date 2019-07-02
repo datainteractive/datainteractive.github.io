@@ -50,6 +50,10 @@ a:hover {
     color: #333;
 }
 
+h1 a:hover {
+    color: #888;
+}
+
 /* Font and style settings ----------------------------------------------------*/
 
 html {
