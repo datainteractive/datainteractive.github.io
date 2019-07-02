@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
-		
 		{% if page.title %}			
 			<title>{{ page.title }} | Data Interactive</title>
 		{% else %}
@@ -15,10 +13,6 @@
 		<script src="https://d3js.org/d3.v5.min.js"></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	</head>
-	
-	
-	
-	
 	
 	<body>
 	<div class="site-header">
@@ -37,14 +31,13 @@
 		
 	
 	{% if page.title %}		
-	<h1>{{ page.title }}</h1>
-	<br><br>
-  {% endif %}
+		<h1>{{ page.title }}</h1>
+		<br><br>
+	{% endif %}
 	
-		{{ content }} TEST
+		{{ content }}
 	
 	<br><br><br>
-	
 	
 	
 	{% if page.comments %}
