@@ -65,7 +65,7 @@ d3.select(".chart")
   .data(data)
     .enter()
     .append("div")
-    .style("width", function(d) { return x(d) + "%"; })
+    .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return Math.round(Number(d)*100)/100 + String.fromCharCode(160) + 'Years'; });
 }
 </script>
