@@ -15,7 +15,7 @@
 
 .slidercontainer {
     margin: auto;
-    width: 40%;
+    max-width: 600px;
 }
 
 /* The slider itself */
@@ -92,7 +92,6 @@ h1 {
   margin-right: 30px;
   padding: 20px;
   background-color: #f9f9f9;
-  min-width: 200px;
 }
 
 .date-format {
