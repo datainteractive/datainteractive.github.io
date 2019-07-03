@@ -16,6 +16,7 @@
 .slidercontainer {
     margin: auto;
     width: 40%;
+    min-width: 200px;
 }
 
 /* The slider itself */
