@@ -121,6 +121,13 @@ var svg = d3.select("#barchart")
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d[headings[1]]); })
       .attr("fill", "#69b3a2")
+    
+    
+    svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("income per capita, inflation-adjusted (dollars)");
 
 })
 
