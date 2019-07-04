@@ -11,6 +11,21 @@
   color: black;
 }
 
+
+.axis path, .axis line {
+  }
+.axis text {
+  	font-size: 13px;
+  }
+.bar {
+    fill: #69b3a2;
+  }
+.bar:hover {
+    fill: #F56C4E;
+  }
+
+
+
 /* Slider settings ----------------------------------------------------*/
 
 .slidercontainer {
