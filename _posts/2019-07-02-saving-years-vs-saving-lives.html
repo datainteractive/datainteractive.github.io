@@ -61,9 +61,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     return a.Value - b.Value;
   });
     
-    
     var headings = data.columns;
-    
     
     data.forEach(function(d) {
         d[headings[1]] = +d[headings[1]];
@@ -71,18 +69,20 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     
     var max = d3.max(data, function(d) { return d[headings[1]]; });
     var i = 0;
-    while (max > 10)
-    {
+    while (max > 10) {
         max = max/10;
         i++;
     }
     max = Math.floor(max) + 1;
-    while (i > 0)
-    {
+    while (i > 0) {
         max = max*10;
         i--;
     }
 
+    
+    
+    
+    
   // X axis
   var x = d3.scaleBand()
     .range([ 0, width ])
@@ -96,11 +96,6 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
       .style("text-anchor", "end")
       .call(wrap, margin.bottom*1.4);
     
-    
-    
-    
-    
-
   // Add Y axis
   var y = d3.scaleLinear()
     .domain([0, max])
