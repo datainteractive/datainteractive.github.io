@@ -15,6 +15,7 @@
 .axis path, .axis line {
   }
 .tick text {
+    font-size: 1.4em;
     font-family: 'Roboto', 'Source Sans Pro', 'PT Serif', Sans-Serif;    
   }
 rect {
