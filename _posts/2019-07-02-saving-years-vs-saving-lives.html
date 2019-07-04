@@ -82,7 +82,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     .data(data)
     .enter()
     .append("rect")
-      .attr("x", function(d) { return x(d['Cause of Death']); })
+      .attr("x", function(d) { return x(d[headings[0]]); })
       .attr("y", function(d) { return y(d[headings[1]]); })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d[headings[1]]); })
