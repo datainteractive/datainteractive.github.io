@@ -41,7 +41,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     
     
     data.forEach(function(d) {
-        d.Number = +d.Number;
+        d[headings[1]] = +d[headings[1]];
     });
     
     var max = d3.max(data, function(d) { return d.Number; });
