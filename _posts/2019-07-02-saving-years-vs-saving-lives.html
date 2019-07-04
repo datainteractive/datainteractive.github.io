@@ -41,7 +41,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
         d.Number = +d.Number;
     });
     
-    var max = d3.max(data, function(d) { return d.Number*1.1; });
+    var max = d3.max(data, function(d) { return d.Number; });
     var i = 0;
     while (max > 10)
     {
@@ -54,7 +54,6 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
         max = max*10;
         i--;
     }
-    
 
   // X axis
   var x = d3.scaleBand()
