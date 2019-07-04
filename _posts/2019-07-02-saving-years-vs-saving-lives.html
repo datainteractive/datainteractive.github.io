@@ -40,6 +40,21 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     data.forEach(function(d) {
         d.Number = +d.Number;
     });
+    
+    var max = d3.max(data, function(d) { return d.Number*1.1; });
+    var i = 0;
+    while (max > 10)
+    {
+        max/10;
+        i++;
+    }
+    max = Math.round(max);
+    while (i > 0)
+    {
+        max = max*10;
+        i--;
+    }
+    
 
   // X axis
   var x = d3.scaleBand()
@@ -55,7 +70,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return d.Number*1.1; })])
+    .domain([0, max])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
