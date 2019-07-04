@@ -35,6 +35,11 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
   data.sort(function(b, a) {
     return a.Value - b.Value;
   });
+    
+    
+    data.forEach(function(d) {
+        d.Number = +d.Number;
+    });
 
   // X axis
   var x = d3.scaleBand()
