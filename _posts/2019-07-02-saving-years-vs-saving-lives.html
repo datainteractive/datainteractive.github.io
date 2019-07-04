@@ -60,10 +60,10 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
     .data(data)
     .enter()
     .append("rect")
-      .attr("x", function(d) { return x(d.Country); })
-      .attr("y", function(d) { return y(d.Value); })
+      .attr("x", function(d) { return x(d['Cause of Death']); })
+      .attr("y", function(d) { return y(d.Number); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.Value); })
+      .attr("height", function(d) { return height - y(d.Number); })
       .attr("fill", "#69b3a2")
 
 })
