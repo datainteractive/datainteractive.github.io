@@ -14,7 +14,7 @@
 
 .axis path, .axis line {
   }
-.axis text {
+.tick text {
   	font-size: 13px;
   }
 .bar {
