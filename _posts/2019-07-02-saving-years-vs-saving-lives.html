@@ -44,7 +44,7 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
         d[headings[1]] = +d[headings[1]];
     });
     
-    var max = d3.max(data, function(d) { return d.Number; });
+    var max = d3.max(data, function(d) { return d[headings[1]]; });
     var i = 0;
     while (max > 10)
     {
@@ -83,9 +83,9 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     .enter()
     .append("rect")
       .attr("x", function(d) { return x(d['Cause of Death']); })
-      .attr("y", function(d) { return y(d.Number); })
+      .attr("y", function(d) { return y(d[headings[1]]); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.Number); })
+      .attr("height", function(d) { return height - y(d[headings[1]]); })
       .attr("fill", "#69b3a2")
 
 })
