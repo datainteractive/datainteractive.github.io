@@ -45,10 +45,10 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     var i = 0;
     while (max > 10)
     {
-        max/10;
+        max = max/10;
         i++;
     }
-    max = Math.round(max);
+    max = Math.floor(max) + 1;
     while (i > 0)
     {
         max = max*10;
