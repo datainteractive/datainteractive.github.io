@@ -17,10 +17,10 @@
 .tick text {
   	font-size: 13px;
   }
-.bar {
+.rect {
     fill: #69b3a2;
   }
-.bar:hover {
+.rect:hover {
     fill: #F56C4E;
   }
 
