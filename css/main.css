@@ -97,11 +97,13 @@ h1 {
   background-color: #fff;
 }
 
-
-
 .post {
   background-color: #f9f9f9;
   padding: 20px;
+}
+
+#disqus_thread {
+  background-color: #f9f9f9;
 }
 
 .date-format {
