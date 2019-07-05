@@ -116,6 +116,7 @@ h1 {
 
 .diagram {
   margin: auto;
+  max-width: 800px;
 }
 
 .post {
