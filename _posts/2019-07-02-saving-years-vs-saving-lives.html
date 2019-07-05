@@ -50,11 +50,11 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     
 // set the dimensions and margins of the graph
 var margin = {top: 60, right: 30, bottom: 70, left: 60},
-    width = numberOfRows*55 - margin.left - margin.right,
+    width = numberOfRows*45,
     height = 400 - margin.top - margin.bottom;
     
-document.body.style.minWidth = width + margin.left + margin.right + "px";
     
+document.body.style.minWidth =  String(width + margin.left + margin.right + 2*30 + 2*20 + 2*20)+ "px";
 
 d3.select("#barchart")
     .style("width",  width + margin.left + margin.right + "px")
