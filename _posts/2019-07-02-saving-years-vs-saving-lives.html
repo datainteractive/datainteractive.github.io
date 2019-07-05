@@ -8,7 +8,7 @@ comments: true
 To come!
 
 <div class="media">
-<div class="diagram" id="barchart">testing alll sorts of things. Testing what happens when I go all the way to the extent of a word wrap or something or so oanwe bigeboab ogwibg oeigoe bg boeogog goegw.</div>
+<div id="barchart"></div>
 </div>
 
 <script>
@@ -54,16 +54,6 @@ var margin = {top: 60, right: 30, bottom: 70, left: 60},
     height = 400 - margin.top - margin.bottom;
 
     
-d3.select(".media")
-  .selectAll("div")
-    .style("background-color", #333);
-    
-d3.select("#barchart")
-    .selectAll("div")
-    .style("width", width + margin.left + margin.right)
-    .style("background-color", "#fff")
-    .style("margin", "auto");
-    
 // append the svg object to the body of the page
 var svg = d3.select("#barchart")
   .append("svg")
@@ -73,7 +63,6 @@ var svg = d3.select("#barchart")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-    
 
   // sort data
   data.sort(function(b, a) {
@@ -97,9 +86,6 @@ var svg = d3.select("#barchart")
         max = max*10;
         i--;
     }
-
-    
-    
     
     
   // X axis
