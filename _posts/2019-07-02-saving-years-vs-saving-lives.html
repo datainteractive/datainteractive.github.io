@@ -54,6 +54,10 @@ var margin = {top: 60, right: 30, bottom: 70, left: 60},
     height = 400 - margin.top - margin.bottom;
 
     
+d3.select(".media")
+  .selectAll("div")
+    .style("background-color", #333);
+    
 d3.select("#barchart")
     .selectAll("div")
     .style("width", width + margin.left + margin.right)
