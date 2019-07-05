@@ -8,7 +8,7 @@ comments: true
 To come!
 
 <div class="media">
-<div class="diagram" id="barchart"></div>
+<div class="diagram" id="barchart">test</div>
 </div>
 
 <script>
@@ -52,9 +52,6 @@ d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
 var margin = {top: 60, right: 30, bottom: 70, left: 60},
     width = numberOfRows*55 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-
-d3.select(".diagram")
-    .style("width", 1400);
 
     
 // append the svg object to the body of the page
