@@ -25,7 +25,7 @@ var sourceString = x[i].innerHTML;
 x[i].innerHTML = "";
 
 var span = document.createElement("span");
-span.innerHTML = "Show source &raquo; ";
+span.innerHTML = "Source + : ";
 span.className = "sourceButton";
 span.setAttribute( "onclick", "toggleSource(this)");
 x[i].append(span);
@@ -36,18 +36,14 @@ span.className = "sourceText";
 span.style.display = "none";
 x[i].append(span);
 }
-    
-    
-    
-    
 
 function toggleSource(x) {
   if (x.parentElement.children[1].style.display === "none") {
     x.parentElement.children[1].style.display = "inline";
-    x.innerHTML = "Hide source &laquo; ";
+    x.innerHTML = "Source - : ";
   } else {
     x.parentElement.children[1].style.display = "none";
-    x.innerHTML = "Show source &raquo; ";
+    x.innerHTML = "Source + : ";
   }
 }
 
