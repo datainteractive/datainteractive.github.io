@@ -27,7 +27,7 @@ x[i].innerHTML = "";
 var span = document.createElement("span");
 span.innerHTML = "Show source &raquo; ";
 span.className = "sourceButton";
-span.setAttribute( "onclick", "toggle(this)");
+span.setAttribute( "onclick", "toggleSource(this)");
 x[i].append(span);
 
 var span = document.createElement("span");
@@ -40,6 +40,16 @@ x[i].append(span);
     
     
     
+
+function toggleSource(x) {
+  if (x.parentElement.children[1].style.display === "none") {
+    x.parentElement.children[1].style.display = "inline";
+  } else {
+    x.parentElement.children[1].style.display = "none";
+  }
+}
+
+
     
     
 function wrap(text, width) {
