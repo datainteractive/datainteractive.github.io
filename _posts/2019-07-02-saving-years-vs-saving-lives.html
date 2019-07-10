@@ -18,101 +18,12 @@ They do have a point (I may be speaking only for myself, but I don't think so). 
 
 <div class="media">
     <div id="barchart"></div>
-    <div class="source">A CDC <a href="https://www.cdc.gov/nchs/fastats/deaths.htm">webpage</a>. Should that link break, the webpage cited this <a href="nvsr68_09-508.pdf">study</a>.</div>
+    <div class="source">A CDC <a href="https://www.cdc.gov/nchs/fastats/deaths.htm">webpage</a>. Should that link break, the webpage cited this <a href="https://datainteractive.github.io/data/nvsr68_09-508.pdf">study</a>.</div>
 </div>
 
 <script>
 
     
-    
-var x = document.getElementsByClassName("source");
-var i;
-for (i = 0; i < x.length; i++) {
-
-var sourceString = x[i].innerHTML;
-x[i].innerHTML = "";
-
-var span = document.createElement("span");
-span.innerHTML = "Source (+) : ";
-span.className = "sourceButton";
-span.setAttribute( "onclick", "toggleSource(this)");
-x[i].append(span);
-
-var span = document.createElement("span");
-span.innerHTML = sourceString;
-span.className = "sourceText";
-span.style.display = "none";
-x[i].append(span);
-}
-
-function toggleSource(x) {
-  if (x.parentElement.children[1].style.display === "none") {
-    x.parentElement.children[1].style.display = "inline";
-    x.innerHTML = "Source (-) : ";
-  } else {
-    x.parentElement.children[1].style.display = "none";
-    x.innerHTML = "Source (+) : ";
-  }
-}
-
-
-    
-    
-function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
-}
-    
-    
-    
-    
-function titlewrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 1.1, // ems
-        y = text.attr("y"),
-        x = text.attr("x"),
-        dy = text.attr("dy") ? text.attr("dy") : 0; //<-- null check
-        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
-}
-    
-    
-    
-
 // Parse the Data
 d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
     
@@ -205,5 +116,97 @@ var svg = d3.select("#barchart")
     .call(titlewrap, width);
 
 })
+    
+    
+    
+    
+var x = document.getElementsByClassName("source");
+var i;
+for (i = 0; i < x.length; i++) {
+
+var sourceString = x[i].innerHTML;
+x[i].innerHTML = "";
+
+var span = document.createElement("span");
+span.innerHTML = "Source (+) : ";
+span.className = "sourceButton";
+span.setAttribute( "onclick", "toggleSource(this)");
+x[i].append(span);
+
+var span = document.createElement("span");
+span.innerHTML = sourceString;
+span.className = "sourceText";
+span.style.display = "none";
+x[i].append(span);
+}
+
+function toggleSource(x) {
+  if (x.parentElement.children[1].style.display === "none") {
+    x.parentElement.children[1].style.display = "inline";
+    x.innerHTML = "Source (-) : ";
+  } else {
+    x.parentElement.children[1].style.display = "none";
+    x.innerHTML = "Source (+) : ";
+  }
+}
+
+
+    
+    
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+    
+    
+    
+    
+function titlewrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        x = text.attr("x"),
+        dy = text.attr("dy") ? text.attr("dy") : 0; //<-- null check
+        tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+    
+    
+    
+
 
 </script>
