@@ -44,6 +44,7 @@ x[i].append(span);
 function toggleSource(x) {
   if (x.parentElement.children[1].style.display === "none") {
     x.parentElement.children[1].style.display = "inline";
+    x.innerHTML = "Hide source &laquo; ";
   } else {
     x.parentElement.children[1].style.display = "none";
   }
