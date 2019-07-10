@@ -9,11 +9,37 @@ To come!
 </p>
 
 <div class="media">
-<div id="barchart"></div>
+    <div id="barchart"></div>
+    <span class="source">The CDC.</span>
 </div>
 
 <script>
 
+    
+    
+var x = document.getElementsByClassName("source");
+var i;
+for (i = 0; i < x.length; i++) {
+
+var sourceString = x[i].innerHTML;
+x[i].innerHTML = "";
+
+var span = document.createElement("span");
+span.innerHTML = "Show source &raquo; ";
+span.className = "sourceButton";
+span.setAttribute( "onclick", "toggle(this)");
+x[i].append(span);
+
+var span = document.createElement("span");
+span.innerHTML = sourceString;
+span.className = "sourceText";
+span.style.display = "none";
+x[i].append(span);
+}
+    
+    
+    
+    
     
     
 function wrap(text, width) {
