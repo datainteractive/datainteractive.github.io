@@ -82,6 +82,15 @@ h1 a:hover {
     font-size: 0.8em;
 }
 
+.source a {
+    color: #333;
+}
+
+.source a:hover {
+    color: #888;
+}
+
+
 .sourceButton {
   
 }
