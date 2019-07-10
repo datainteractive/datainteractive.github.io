@@ -29,7 +29,7 @@ var sourceString = x[i].innerHTML;
 x[i].innerHTML = "";
 
 var span = document.createElement("span");
-span.innerHTML = "Source + : ";
+span.innerHTML = "Source (+) : ";
 span.className = "sourceButton";
 span.setAttribute( "onclick", "toggleSource(this)");
 x[i].append(span);
@@ -44,10 +44,10 @@ x[i].append(span);
 function toggleSource(x) {
   if (x.parentElement.children[1].style.display === "none") {
     x.parentElement.children[1].style.display = "inline";
-    x.innerHTML = "Source - : ";
+    x.innerHTML = "Source (-) : ";
   } else {
     x.parentElement.children[1].style.display = "none";
-    x.innerHTML = "Source + : ";
+    x.innerHTML = "Source (+) : ";
   }
 }
 
