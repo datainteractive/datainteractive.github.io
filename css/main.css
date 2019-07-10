@@ -78,16 +78,16 @@ h1 a:hover {
 /* Source settings ----------------------------------------------------*/
 
 .source {
-    color: #888;
+    color: #333;
     font-size: 0.8em;
 }
 
 .source a {
-    color: #333;
+    color: #888;
 }
 
 .source a:hover {
-    color: #888;
+    color: #333;
 }
 
 
