@@ -92,7 +92,7 @@ h1 a:hover {
 
 
 .sourceButton {
-  
+    cursor:pointer;  
 }
 
 .sourceText {
