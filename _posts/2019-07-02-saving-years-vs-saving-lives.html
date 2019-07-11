@@ -17,15 +17,22 @@ They might have a point. The goal of this article is to initiate some awareness 
 </p>
 
 <div class="media">
-    <div id="barchart"></div>
+    <div class="barchart" data-link="https://datainteractive.github.io/data/totals.csv"></div>
     <div class="source">A CDC <a target="_blank" href="https://www.cdc.gov/nchs/fastats/deaths.htm">webpage</a>. In turn, that webpage cited this <a href="https://datainteractive.github.io/data/nvsr68_09-508.pdf">study</a>.</div>
 </div>
 
 <script>
 
     
+var x = document.getElementsByClassName("barchart");
+var i;
+for (i = 0; i < x.length; i++) {
+    
+   
+x[i].id = "tempID";
+    
 // Parse the Data
-d3.csv("https://datainteractive.github.io/data/totals.csv", function(data) {
+d3.csv(x[i].dataset.link, function(data) {
     
     var numberOfRows = data.length;
     
@@ -38,12 +45,12 @@ var margin = {top: 60, right: 30, bottom: 70, left: 60},
     
 document.body.style.minWidth =  String(width + margin.left + margin.right + 2*30 + 2*20 + 2*20)+ "px";
 
-d3.select("#barchart")
+d3.select("#tempID")
     .style("width",  width + margin.left + margin.right + "px")
     .style("margin", "auto");
     
 // append the svg object to the body of the page
-var svg = d3.select("#barchart")
+var svg = d3.select("#tempID")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -115,8 +122,12 @@ var svg = d3.select("#barchart")
     .text("Number of Deaths per Leading Cause, United States 2017")
     .call(titlewrap, width);
 
-})
+});
     
+    
+x[i].id = "";
+    
+}
     
     
     
