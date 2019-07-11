@@ -1,5 +1,4 @@
 
-<script>
     
 var x = document.getElementsByClassName("barchart");
 var i;
@@ -181,5 +180,3 @@ function titlewrap(text, width) {
 }
     
     
-    
-</script>
