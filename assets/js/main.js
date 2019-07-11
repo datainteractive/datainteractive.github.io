@@ -1,23 +1,19 @@
-
     
 var x = document.getElementsByClassName("barchart");
 var i;
 for (i = 0; i < x.length; i++) {
     
-   
 x[i].id = "tempID";
     
 // Parse the Data
 d3.csv(x[i].dataset.link, function(data) {
     
-    var numberOfRows = data.length;
-    
+var numberOfRows = data.length;
     
 // set the dimensions and margins of the graph
 var margin = {top: 60, right: 30, bottom: 70, left: 60},
     width = numberOfRows*45,
     height = 400 - margin.top - margin.bottom;
-    
     
 document.body.style.minWidth =  String(width + margin.left + margin.right + 2*30 + 2*20 + 2*20)+ "px";
 d3.select("#tempID")
@@ -94,8 +90,6 @@ var svg = d3.select("#tempID")
     .text("Number of Deaths per Leading Cause, United States 2017")
     .call(titlewrap, width);
 });
-    
-    
 }
     
     
@@ -103,19 +97,25 @@ var svg = d3.select("#tempID")
 var x = document.getElementsByClassName("source");
 var i;
 for (i = 0; i < x.length; i++) {
+    
 var sourceString = x[i].innerHTML;
 x[i].innerHTML = "";
+    
 var span = document.createElement("span");
 span.innerHTML = "Source (+) : ";
 span.className = "sourceButton";
 span.setAttribute( "onclick", "toggleSource(this)");
 x[i].append(span);
+    
 var span = document.createElement("span");
 span.innerHTML = sourceString;
 span.className = "sourceText";
 span.style.display = "none";
 x[i].append(span);
+  
 }
+
+
 function toggleSource(x) {
   if (x.parentElement.children[1].style.display === "none") {
     x.parentElement.children[1].style.display = "inline";
@@ -125,7 +125,6 @@ function toggleSource(x) {
     x.innerHTML = "Source (+) : ";
   }
 }
-    
     
 function wrap(text, width) {
   text.each(function() {
@@ -150,9 +149,6 @@ function wrap(text, width) {
     }
   });
 }
-    
-    
-    
     
 function titlewrap(text, width) {
   text.each(function() {
